@@ -1,0 +1,52 @@
+.glide {
+  max-width: calc(100% - 140px); // equal to box-container
+}
+
+.glide__slide {
+  height: 228px !important; // equal to box
+}
+
+.btn {
+  outline: none;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: $transition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 154px; // box height + padding top
+  transform: translateY(-50%);
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: $lightBlue;
+  }
+
+  .arrow {
+    width: 13px;
+    height: 24px;
+  }
+
+  &-left {
+    left: -70px; // 48 width + 22 margin
+
+    &-arrow {
+      position: relative;
+      right: 2px;
+    }
+  }
+
+  &-right {
+    right: -70px;
+
+    &-arrow {
+      position: relative;
+      right: -2px;
+    }
+  }
+}

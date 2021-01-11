@@ -1,0 +1,105 @@
+.cards {
+  text-align: center;
+  position: relative;
+  padding: 49px 0 60px;
+
+  &-blue {
+    background-color: $blue;
+
+    h1,
+    h2 {
+      color: $white;
+    }
+  }
+
+  &-lightgray {
+    background-color: $lightGray;
+  }
+
+  h1 {
+    line-height: 52px;
+    font-size: 2.6rem;
+    font-weight: 300;
+
+    @include tablet {
+      font-size: 2.3rem;
+    }
+
+    @include phone {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    padding-top: 5px;
+    line-height: 32px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 60%;
+    margin: 0 auto;
+
+    @include desktop-sm {
+      line-height: 25px;
+    }
+
+    @include tablet {
+      max-width: 90%;
+      font-size: 1.2rem;
+    }
+
+    @include phone {
+      font-size: 1.1rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+.box-container {
+  width: calc(100% - 140px); // 140 = 2 x btn + 2 x btn 'margin'
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.box {
+  background-color: $white;
+  height: 228px;
+  width: calc(33% - 13px); // 13x3 = inbetween 20px x 2 margin
+  padding: 0 26px;
+
+  @include desktop-sm {
+    padding: 0 15px;
+  }
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: $blackText;
+    padding-top: 36px;
+  }
+
+  p {
+    color: $grayText;
+    font-size: 0.95rem;
+    padding: 12px 0;
+  }
+
+  &-logo {
+    width: 42px;
+    height: 42px;
+  }
+}

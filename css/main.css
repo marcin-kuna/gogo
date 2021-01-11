@@ -38,45 +38,86 @@ body {
 }
 
 .header-logo {
+  width: 160px;
+  height: 38px;
   position: absolute;
   top: 23px;
   left: 0;
 }
 
-.content {
+@media (max-width: 599px) {
+  .header-logo {
+    width: 140px;
+  }
+}
+
+.cards {
   text-align: center;
   position: relative;
   padding: 49px 0 60px;
 }
 
-.content-blue {
+.cards-blue {
   background-color: #215398;
 }
 
-.content-blue h1,
-.content-blue p {
+.cards-blue h1,
+.cards-blue h2 {
   color: #ffffff;
 }
 
-.content-lightgray {
+.cards-lightgray {
   background-color: #f1f6fc;
 }
 
-.content h1 {
+.cards h1 {
   line-height: 52px;
-  font-size: 40px;
+  font-size: 2.6rem;
   font-weight: 300;
 }
 
-.content h3 {
-  font-size: 20px;
-  font-weight: 300;
+@media (max-width: 768px) {
+  .cards h1 {
+    font-size: 2.3rem;
+  }
 }
 
-.content p {
+@media (max-width: 599px) {
+  .cards h1 {
+    font-size: 2rem;
+  }
+}
+
+.cards h2 {
   padding-top: 5px;
   line-height: 32px;
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .cards h2 {
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards h2 {
+    max-width: 90%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .cards h2 {
+    font-size: 1.1rem;
+  }
+}
+
+.cards h3 {
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
@@ -97,12 +138,13 @@ body {
   position: relative;
 }
 
-.glide {
-  max-width: calc(100% - 140px);
-}
-
-.glide__slide {
-  height: 228px !important;
+@media (max-width: 768px) {
+  .box-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .box {
@@ -112,6 +154,19 @@ body {
   padding: 0 26px;
 }
 
+@media (max-width: 1024px) {
+  .box {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .box h3 {
   color: #2d3236;
   padding-top: 36px;
@@ -119,11 +174,24 @@ body {
 
 .box p {
   color: #808080;
-  font-size: 15px;
+  font-size: 0.95rem;
   padding: 12px 0;
 }
 
-.arrow {
+.box-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.glide {
+  max-width: calc(100% - 140px);
+}
+
+.glide__slide {
+  height: 228px !important;
+}
+
+.btn {
   outline: none;
   background-color: transparent;
   width: 48px;
@@ -147,26 +215,31 @@ body {
           transform: translateY(-50%);
 }
 
-.arrow:hover {
+.btn:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.05);
   border-color: #28a9e0;
 }
 
-.arrow-left {
+.btn .arrow {
+  width: 13px;
+  height: 24px;
+}
+
+.btn-left {
   left: -70px;
 }
 
-.arrow-left img {
+.btn-left-arrow {
   position: relative;
   right: 2px;
 }
 
-.arrow-right {
+.btn-right {
   right: -70px;
 }
 
-.arrow-right img {
+.btn-right-arrow {
   position: relative;
   right: -2px;
 }

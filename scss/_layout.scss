@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-sm {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 $white: #ffffff;
 $blue: #215398;
 $lightBlue: #28a9e0;
